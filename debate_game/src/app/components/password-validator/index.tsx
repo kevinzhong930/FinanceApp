@@ -28,7 +28,7 @@ const PasswordValidator = ({password, re_entered_password} : PasswordData) => {
         setOneLetter(oneLetterRegex.test(password))
         setOneNumber(oneNumberRegex.test(password))
         setOneSpecialChar(oneSpecialCharRegex.test(password))
-        setPasswordsMatch(password === re_entered_password)
+        setPasswordsMatch( (password === re_entered_password) && (password.length > 0) )
     }
 
     useEffect(() => {
