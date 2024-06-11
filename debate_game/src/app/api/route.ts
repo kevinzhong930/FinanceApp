@@ -1,11 +1,5 @@
-import { query} from '@/app/config/db';
 import { NextResponse } from 'next/server';
 
-export async function GET(req : Request){
-    const results = await query({
-        query : 'SELECT * FROM posts',
-        values : [],
-    });
-
-    return NextResponse.json({ results : results}, {status : 200})
+export async function GET(){
+    return NextResponse.json({ message : "API works!" }, {status : 200})
 }
