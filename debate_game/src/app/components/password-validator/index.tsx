@@ -9,7 +9,6 @@ const PasswordValidator = ({password, re_entered_password} : PasswordData) => {
     const [eightCharsLong, setEightCharsLong] = useState(false)
     const [oneUpperChar, setOneUpperChar] = useState(false)
     const [oneLowerChar, setOneLowerChar] = useState(false)
-    const [oneLetter, setOneLetter] = useState(false)
     const [oneNumber, setOneNumber] = useState(false)
     const [oneSpecialChar, setOneSpecialChar] = useState(false)
     const [passwordsMatch, setPasswordsMatch] = useState(false)
@@ -17,7 +16,6 @@ const PasswordValidator = ({password, re_entered_password} : PasswordData) => {
     const eightCharsLongRegex = new RegExp('(?=.{8,})')
     const oneUpperCharRegex = new RegExp('(?=.*[A-Z])')
     const oneLowerCharRegex = new RegExp('(?=.*[a-z])')
-    const oneLetterRegex = new RegExp('(?=.*[A-Za-z])')
     const oneNumberRegex = new RegExp('(?=.*[0-9])')
     const oneSpecialCharRegex = new RegExp('(?=.*[!@#$%^&*])')
 
@@ -25,7 +23,6 @@ const PasswordValidator = ({password, re_entered_password} : PasswordData) => {
         setEightCharsLong(eightCharsLongRegex.test(password))
         setOneUpperChar(oneUpperCharRegex.test(password))
         setOneLowerChar(oneLowerCharRegex.test(password))
-        setOneLetter(oneLetterRegex.test(password))
         setOneNumber(oneNumberRegex.test(password))
         setOneSpecialChar(oneSpecialCharRegex.test(password))
         setPasswordsMatch( (password === re_entered_password) && (password.length > 0) )
@@ -48,10 +45,6 @@ const PasswordValidator = ({password, re_entered_password} : PasswordData) => {
             <div id="1LowerChar">
                 <span className={`inline-block w-3 h-3 rounded-full mr-2 ${oneLowerChar ? 'bg-green-500' : 'bg-red-500'}`}></span>
                 One Lowercase Letter
-            </div>
-            <div id="1Letter">
-                <span className={`inline-block w-3 h-3 rounded-full mr-2 ${oneLetter ? 'bg-green-500' : 'bg-red-500'}`}></span>
-                One Letter
             </div>
             <div id="1Number">
                 <span className={`inline-block w-3 h-3 rounded-full mr-2 ${oneNumber ? 'bg-green-500' : 'bg-red-500'}`}></span>
