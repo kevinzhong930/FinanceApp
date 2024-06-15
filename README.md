@@ -1,10 +1,10 @@
-# Hot Takes
+# Not Broke
 
 Tech Stack : React ( NextJS ), Tailwind CSS (DaisyUI), MySQL
 
-Website where users can : 
-  - Make controversial posts
-  - Challenge users to a game if they disagree with a post (Will support many different games : Chess, Connect 4, etc.)
-  - If the post author loses enough games, the post is deleted (Will scale with # of likes in the future)
+Website where users can track their finances through : 
+  - Adding expenses
+  - Adding subscriptions to automate
+  - Tracks monthly usage
 
 Built By : Kevin Zhong

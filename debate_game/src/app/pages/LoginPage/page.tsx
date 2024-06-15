@@ -44,7 +44,7 @@ const LoginPage = () => {
                 if(data.success === false) {
                     setDisplayInvalidCredentials(true)
                 } else {
-                    router.push('/pages/FeedPage')
+                    router.push('/')
                 }
             })
         } else {
